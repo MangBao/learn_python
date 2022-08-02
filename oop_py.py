@@ -39,22 +39,23 @@ class SinhVien(Nguoi):
 class GiangVien(Nguoi):
     global trinhdo
     
-    def luongcb():
+    def luongcb(self):
         return 150000
     
     def setTrinhDo(self, val):
         self.trinhdo = val
-    def getTrinhDo(self, val):
+    def getTrinhDo(self):
         return self.trinhdo
     
     def tinhLuong(self):
         if self.trinhdo == "cunhan":
-            return self.luongcb() * 2.34
+            return float(self.luongcb()) * 2.34
         if self.trinhdo == "thacsi":
-            return self.luongcb() * 3.67
+            return float(self.luongcb()) * 3.67
         if self.trinhdo == "tiensi":
-            return self.luongcb() * 5.66
+            return float(self.luongcb()) * 5.66
         
 
-mysv = GiangVien("Mang Bảo", "Cam Ranh", "Nam")
-print(mysv.getName())
+myIn4 = GiangVien("Mang Bảo", "Cam Ranh", "Nam")
+myIn4.setTrinhDo("cunhan")
+print(myIn4.tinhLuong())
