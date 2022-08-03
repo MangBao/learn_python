@@ -86,3 +86,9 @@ def my_function(*kids):
     print("The youngest child is " + kids[2])
 
 # my_function(childv = "Emil", "Tobias", "Linus")
+
+person1 = {
+    "name": "Mang Bảo",
+    "age": 22,
+    "country": "Cam Ranh"
+}
